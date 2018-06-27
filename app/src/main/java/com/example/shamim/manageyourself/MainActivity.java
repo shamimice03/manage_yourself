@@ -55,6 +55,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
+    protected void onStart() {
+        super.onStart();
+
+    }
+
+    @Override
     public void onClick(View view) {
 
         String username = UserName.getText().toString();
@@ -75,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 FocusCircle.setVisibility(View.VISIBLE);
 
                 Intent intent = new Intent(MainActivity.this,MenuActivity.class);
+                intent.putExtra("Username",username);
                 startActivity(intent);
                 finish();
             }else{

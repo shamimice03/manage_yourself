@@ -102,4 +102,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return result;
 
     }
+
+    // Searching a single element
+    public Cursor getInfo(String user_name,SQLiteDatabase sqLiteDatabase){
+
+        String[] projection = {ID,EMAIL};
+        String selction=USERNAME+" LIKE ?";
+        String[] selction_args = {user_name};
+        Cursor cursor = sqLiteDatabase.query(TABLE_NAME,projection,selction,selction_args,null,null,null);
+        return cursor;
+    }
 }

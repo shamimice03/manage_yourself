@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.shamim.manageyourself.MenuActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/appPrimary"
+        />
+    <TextView
+        android:id="@+id/email"
+        android:layout_below="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textColor="@color/appPrimary"
+        android:textSize="20sp"
+        />
+
+    <RelativeLayout
+        android:gravity="bottom|end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.FloatingActionButton
+            android:layout_margin="16dp"
+            android:id="@+id/myfab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="normal"
+            android:clickable="true"
+            app:backgroundTint="@color/appPrimary"
+            app:srcCompat="@drawable/ic_add_black_24dp"
+            />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
+
+
